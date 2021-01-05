@@ -25,13 +25,13 @@ class AndroidConfig
     private $priority = AndroidMessagePriority::NORMAL;
 
     /**
-     * @var int Combien de temps (en secondes) le message doit être conservé
+     * @var int Combien de temps (en milisecondes) le message doit être conservé
      * dans le stockage FCM si le périphérique est hors ligne.
      * La durée maximale de vie prise en charge est de 4 semaines et la valeur par
      * défaut est de 4 semaines si elle n'est pas définie.
      * Réglez-le sur 0 si vous souhaitez envoyer le message immédiatement.
      */
-    private $ttl = null;
+    private $ttl = 259200000;
 
     /**
      * @var string TODO SYNERTIC : PAS ENCORE PRIS EN COMPTE
@@ -59,6 +59,11 @@ class AndroidConfig
      */
     private $directBootOk = null;
 
+
+    public function __construct()
+    {
+        $this->notification = new AndroidNotification();
+    }
 
     /**
      * *********************************************

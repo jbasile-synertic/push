@@ -58,6 +58,12 @@ class Schedule
     private $devices = [];
 
     /**
+     * @var AndroidConfig Options spécifiques à Android pour les
+     * messages envoyés via le serveur de connexion FCM.
+     */
+    private $androidConfig = null;
+
+    /**
      * @return int
      */
     public function getClientScheduleId(): int

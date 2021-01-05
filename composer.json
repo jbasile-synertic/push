@@ -1,7 +1,7 @@
 {
     "name": "synertic/push",
     "description": "Projet utilitaire facilitant l'envoi des campagnes de push",
-    "type": "library",
+    "type": "Package",
     "authors": [
         {
             "name": "Johan BASILE",
